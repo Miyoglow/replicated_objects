@@ -142,8 +142,8 @@ function REPLOBJ.static:RegisterVar(field, fieldType, accessorName)
 	end
 
 	local varRegisters = self:GetVarRegisters()
-		varRegisters[field] = true
-	self:GetVarRegisters(varRegisters)
+		varRegisters[field] = fieldType
+	self:SetVarRegisters(varRegisters)
 end
 
 PLUGIN.replicatedObjectClass = REPLOBJ
